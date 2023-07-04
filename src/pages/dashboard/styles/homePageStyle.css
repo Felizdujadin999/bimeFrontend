@@ -1,0 +1,94 @@
+
+.sec{
+    position: relative;
+}
+
+
+
+.homemain{
+    height: 100vh;
+    background-image: url(../../../assets/images/blury\ background.PNG);
+    background-size: cover;
+    border: solid 1pt transparent;
+    
+    z-index: -1;  
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.homemain::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    filter: blur(10px);
+}
+
+
+.topnav{
+    height: 8%;
+    border-bottom: solid 1pt  rgba(245, 245, 245, 0.171);
+    display: flex;
+    justify-content: space-around;
+
+   
+}
+
+.topnav li{
+    border-left: solid 1pt  rgba(245, 245, 245, 0.233);
+    color: white;
+    width: 10%;
+    height: 100%;
+    list-style: none;
+    
+}
+
+
+.hero{
+    height: 35%;
+    width: 90%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.178);
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+.aside{
+    display: flex;
+    height: 40%;
+}
+
+.box1{
+    width: 30%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.178);
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.box2{
+    width: 58%;
+    height: 80%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.096);
+    margin-left: 2%;
+    margin-top: 2%;  
+}
+
+.footer{
+    height: 5%;
+    border-top: solid 1pt  rgba(245, 245, 245, 0.171);
+    display: flex;
+    justify-content: space-around;
+   
+}
+
+.logo{
+    height: 20px;
+    margin: 10%;
+}
+.user{
+height: 30px;
+margin: 8%;
+}
