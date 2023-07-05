@@ -7,15 +7,17 @@ export const Hero =()=>{
     const colors = ["#00FF00", "#DC143C", "#FFFF00", "#00FFFF", "	#000000", '	#FF4500']
 
 
-    const setTheme = () =>{
-        
+    const setTheme = (color) =>{
+        document.documentElement.style.setProperty('--bg-color', color)
     }
 
     const setColor = (event) =>{
          const currentColor = event.target.style.getPropertyValue('--bg-color');
+         setTheme(currentColor)
          console.log(currentColor);
     }
 
+  
 
     return(
         <div className='hero'>
