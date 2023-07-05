@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import '../styles/coloswitch.css'
 import  ColorItem  from "./color-item";
 
 export const Hero =()=>{
 
-    const colors = ["#00FF00", "#DC143C", "#FFFF00", "#00FFFF", "	#000000", '	#FF4500']
+    const colors = ["#160225", "#30021b", "#022325", "#022c06", "#454907", '#490707', '#000000', '#bdb9b9','#6b4705']
 
+    useEffect(()=>{
+        const currentColor = localStorage.getItem('color')
+        console.log(currentColor);
+        setTheme(currentColor)
+    },[])
 
     const setTheme = (color) =>{
         document.documentElement.style.setProperty('--bg-color', color)
@@ -13,8 +18,8 @@ export const Hero =()=>{
 
     const setColor = (event) =>{
          const currentColor = event.target.style.getPropertyValue('--bg-color');
-         setTheme(currentColor)
-         console.log(currentColor);
+            setTheme(currentColor)
+            localStorage.setItem('color', currentColor);
     }
 
   
@@ -22,12 +27,13 @@ export const Hero =()=>{
     return(
         <div className='hero'>
              <div className="color-switcher">
-                    <button className="cpb"><i class="ri-settings-3-fill"></i></button>
-                    <hi className="heading">select color</hi>
+                    <button className="cpb"><div className="ri-settings-3-fill"></div></button>
+                    <h1 className="heading">personalise</h1>
                     <div className="color-list">
-                       {colors.map((color, idx)=> <ColorItem setColor={setColor} color = {color}/>)} 
+                       {colors.map((color, idx)=> <ColorItem  key={idx} setColor={setColor} color = {color}/>)} 
                     </div>
                 </div>
         </div>
+        
     )
 }
