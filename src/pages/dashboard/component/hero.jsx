@@ -13,7 +13,7 @@ export const Hero =()=>{
 
     const setColor = (event) =>{
          const currentColor = event.target.style.getPropertyValue('--bg-color');
-         setTheme(currentColor)
+           setTheme(currentColor)
          console.log(currentColor);
     }
 
