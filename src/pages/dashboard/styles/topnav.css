@@ -17,27 +17,27 @@
     margin-left: 28%;
 }
 
-.signup :hover{
-    transform: scaleX(1.4) ;
-}
 
 
 .login{
     border-radius: 8px;
     border:  solid 2pt rgba(255, 255, 255, 0.24);
     height: 40px;
+    width: fit-content;   
 }
 
-.login :hover{
-    transform: scale(1.1) ;
-}
+
+
+
 
 .dp{
     
-    border-radius: 10PX;
-    width: fit-content;
-    height: fit-content;
+    border-radius: 50PX;
+    width: 2rem;
+    height: 2rem;
     margin-left: 39%;
+    border: solid 2pt rgba(255, 255, 255, 0.329);
+    margin-top: 8%;
     
 }
 
@@ -90,19 +90,31 @@
     cursor: pointer;
     border-top: solid 2pt rgba(0, 0, 0, 0.178);
     display: flex;
-    /* border: solid 1pt red; */
+    background-color:transparent;
 }
+
+
 
 
 .drpdown img{
     height: 20px;
     margin-right:0%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 
 .drpdown p{
     font-size: 100rem;
     margin: auto;
     
+}
+
+.logo{
+    height: 20px;
+    margin-top: 40%;
+}
+
+.user{
+height: 25px;
+margin: 12%;
 }
 

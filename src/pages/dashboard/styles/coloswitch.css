@@ -1,18 +1,18 @@
 .color-switcher{
     width: 10rem;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.87);
     padding: 1rem;
     position: absolute;
     left: 0;
     transform: translate(0, 50%);
-    
-    
-
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 .heading{
     font-size: 1.2rem ;
-    margin-bottom: 1.2rem;
+    margin-top: 0%;
+    
 }
 
 
@@ -24,11 +24,11 @@
 }
 
 .color-item{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     background-color: var(--bg-color);
-    border: solid 2pt rgba(87, 85, 85, 0.411);
+    border: solid 2pt rgba(87, 85, 85, 0.541);
     
     
 }
@@ -36,13 +36,15 @@
 .cpb{
     width: 3rem;
     height: 3rem;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.87);
     border: none;
-    color: red;
+    color: var(--bg-color);
     font-size: large;
     right: 0;
     top: 50%;
-    transform: translate(355%, 100%);
+    transform: translate(369%, 150%);
     display: grid;
     place-items: center;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
