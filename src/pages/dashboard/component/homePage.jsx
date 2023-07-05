@@ -1,9 +1,10 @@
 import '../styles/homePageStyle.css'
 import { Helmet } from "react-helmet";
-import user from '../../../assets/images/user (1).png'
-import bimelogo from '../../../assets/images/bime.svg'
+import { Hero } from './hero';
+import { TopNav } from './topNav';
 
 function HomePage (){
+   
     return(
        
        <section className='map'>
@@ -16,44 +17,22 @@ function HomePage (){
       </Helmet>
         </div>
          <div className="homemain">
-            <nav className="topnav">
-              
-                <li >
-                    <img className='logo' src={bimelogo} alt="" />
-                </li>
-                <li className='faq'>
-                    <p>FAQ</p>
-                </li>
-                <li className='contact us'>
-                    <p>support</p>
-                </li>
-                <li className= 'mylist'>
-                    <p>my list</p>
-                </li>
-                <li className='signup'>
-                    <p>Sign up</p>
-                </li>
-                <li className='login'>
-                     <p>Login</p>
-                </li>
-                <li className=''>
-                     <img  className= 'user' src={user} alt="" />
-                </li>
-            </nav> 
+            <TopNav/> 
+            <Hero/>
 
-
-            <div className='hero'></div>
-
-            <div className="aside">
-                <div className="box1"></div>
-                <div className="box2"></div>
+            <div className="aside1">
+            <div className="box1"></div>
+            <div className="box2"></div>
             </div>
 
-            <footer >
-                <div className='footer'>
+            <div className="aside2">
+                <div className="box3"></div>
+                <div className="box4"></div>
+            </div>
 
-                </div>
-            </footer>     
+            <div className="foot">
+               
+            </div>    
         </div>
        </section>
     );
