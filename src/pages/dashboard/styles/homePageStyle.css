@@ -1,8 +1,14 @@
 
+
+
+
+:root{
+    --bg-color:#160225;
+}
+
 .sec{
     position: relative;
 }
-
 
 
 .homemain{
@@ -10,8 +16,7 @@
     /* background-image: url(../../../assets/images/blury\ background.PNG); */
     background-size: cover;
     border: solid 1pt transparent;
-    background-color: #160225;
-    
+    background-color: var(--bg-color);
     z-index: -1;  
     background-position: center;
     background-attachment: fixed;
@@ -28,13 +33,11 @@
 
 
 
-
-
 .hero{
     height: 25%;
     width: 90%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.178);
+    background-color: rgba(255, 255, 255, 0.733);
     margin-left: 5%;
     margin-top: 1%;
 }
@@ -48,7 +51,7 @@
     width: 30%;
     height: 80%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.178);
+    background-color: rgba(255, 255, 255, 0.733);
     margin-left: 5%;
     margin-top: 2%;
 }
@@ -57,7 +60,7 @@
     width: 58%;
     height: 80%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.096);
+    background-color:rgba(255, 255, 255, 0.733);
     margin-left: 2%;
     margin-top: 2%;  
 }
@@ -73,7 +76,7 @@
     width: 30%;
     height: 80%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.178);
+    background-color: rgba(255, 255, 255, 0.733);
     margin-left: 5%;
     margin-top: 1%;
 }
@@ -82,27 +85,19 @@
     width: 58%;
     height: 80%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.178);
+    background-color: rgba(255, 255, 255, 0.733);
     margin-left: 2%;
     margin-top: 1%;  
 }
 
 
-.logo{
-    height: 20px;
-    margin-top: 40%;
-}
 
-.user{
-height: 25px;
-margin: 15%;
-}
 
 
 
 .foot{
     height: 0%;
-    border-top: solid 1pt  rgba(245, 245, 245, 0.171);
+    border-top: solid 1pt  rgba(255, 255, 255, 0.733);
     display: flex;
     justify-content: space-around;  
 }
