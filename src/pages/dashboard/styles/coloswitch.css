@@ -4,10 +4,20 @@
     padding: 1rem;
     position: absolute;
     left: 0;
-    transform: translate(0, 50%);
+    transform: translate(-100%, 2%);
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    
+    
 }
+
+.color-switcher--open{
+    transform: translate(0%, 2%);
+}
+
+
 
 .heading{
     font-size: 1.2rem ;
@@ -21,6 +31,7 @@
     grid-template-columns: repeat(3,1fr);
     gap: 1rem;
     margin-top: 1.2rem; 
+    cursor: pointer;
 }
 
 .color-item{
@@ -29,6 +40,7 @@
     border-radius: 50%;
     background-color: var(--bg-color);
     border: solid 2pt rgba(87, 85, 85, 0.541);
+    cursor: pointer;
     
     
 }
@@ -47,4 +59,21 @@
     place-items: center;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
+    cursor: pointer;
+}
+
+.ri-settings-3-fill{
+    animation: rotate-animation 10s infinite linear;
+}
+
+@keyframes rotate-animation {
+	0% {
+		transform: rotate(0deg);
+  }
+  50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
