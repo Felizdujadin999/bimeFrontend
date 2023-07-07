@@ -1,0 +1,88 @@
+/* 
+:root{
+    --bg-color:#160225;
+} */
+
+.regMain{
+   
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+}
+
+
+.regform{
+
+    border-radius: 8px;
+    height: 380px;
+    width: 300px;
+    display: grid;
+    margin-left: 38%;
+    margin-top: 10%;
+    background-color: rgba(255, 255, 255, 0.541);
+    padding: 1rem;
+
+}
+
+.regbime{
+    margin-left: 34%;
+}
+
+.regform input{
+    margin-top: 5%;
+    border: solid 2pt white;
+    background-color: transparent;
+    border-radius: 8px;
+    height: 40px;
+    outline: none;
+    color: white;
+    font-size: small;
+    
+}
+
+input :placeholder-shown{
+    color: white;
+    margin-left: 5%;
+}
+
+button{
+    height: 50px;
+    border-radius: 8px;
+    outline: none;
+    color: white;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    margin-top: 5%;
+    border: none;
+}
+
+button :hover{
+    transform: scale(1.1);
+}
+
+.regredir{
+    margin-left: 9%;
+}
+
+
+
+
+@media only screen and (max-width:500px) {
+
+
+    .regform{
+
+        border-radius: 8px;
+        height: 380px;
+        width: 300px;
+        display: grid;
+        margin-left: 4%;
+        margin-top: 10%;
+        background-color: rgba(255, 255, 255, 0.541);
+        padding: 1rem;
+    
+    }
+    
+    
+}
