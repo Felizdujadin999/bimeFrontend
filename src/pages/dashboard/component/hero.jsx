@@ -4,18 +4,17 @@ import  ColorItem  from "./color-item";
 
 export const Hero =()=>{
 
-    const colors = ["#160225", "#30021b", "#022325", "#022c06", "#454907", '#490707', '#000000', '#bdb9b9','#6b4705']
+    const colors = ["#160225", "#30021b", "#022325", "#022c06", "#454907", '#490707', '#000000', '#5c5b5b','#6b4705']
 
-    const [state, setState] = useState(false)
+    const [state, setState] = useState(false);
 
     useEffect(()=>{
-        const currentColor = localStorage.getItem('color')
-        console.log(currentColor);
+        const currentColor = localStorage.getItem('color');
         setTheme(currentColor)
     },[])
 
     const setTheme = (color) =>{
-        document.documentElement.style.setProperty('--bg-color', color)
+        document.documentElement.style.setProperty('--bg-color', color);
     }
 
     const setColor = (event) =>{

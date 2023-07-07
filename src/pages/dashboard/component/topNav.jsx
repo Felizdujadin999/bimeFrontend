@@ -21,6 +21,14 @@ export const TopNav = ()=>{
        
     }
 
+    const toLogin =()=>{
+        window.location.href = '/login'
+    }
+
+    const toSignup =()=>{
+        window.location.href = '/signUp'
+    }
+
     return(
         <nav className="topnav">
               
@@ -31,10 +39,10 @@ export const TopNav = ()=>{
             <p>FAQ</p>
         </li>
     
-        <li className='signup'>
+        <li className='signup' onClick={toSignup}>
             <p>Sign up</p>
         </li>
-        <li className='login'>
+        <li className='login' onClick={toLogin}>
              <p>Login</p>
         </li>
         <li>
