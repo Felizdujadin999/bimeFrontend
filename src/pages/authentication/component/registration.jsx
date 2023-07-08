@@ -10,7 +10,6 @@ export const Registration=()=>{
       const[username, setUsername] = useState('');
       const[email, setEmail] = useState('');
       const[password, setPassword]= useState('');
-      const[errormessage, setErrorMessage] = useState('')
 
     
 
@@ -32,7 +31,6 @@ console.log('Fields --> ', username, password, email)
     .catch((error)=>{
         return error
     })
-
     console.log('res --> ', response)
 }
  
@@ -70,7 +68,7 @@ console.log('Fields --> ', username, password, email)
             style={{ backgroundColor: bgColor }}
             type="submit"
           >
-            sign in
+            sign up
           </button>
           <p className="regredir">
             Already have an account? <a href="/login">login</a>

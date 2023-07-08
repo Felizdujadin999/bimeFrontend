@@ -37,7 +37,7 @@
     height: 2rem;
     margin-left: 39%;
     border: solid 2pt rgba(255, 255, 255, 0.329);
-    margin-top: 8%;
+    margin-top: 25px;
     
 }
 
@@ -56,8 +56,7 @@
 
 
 .topnav li p{
-    
-    margin-left: 28%;
+    margin-left: 15%;
     font-size: small;
     margin-top: 8%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
@@ -68,13 +67,14 @@
 
 .drpdown{
     border-radius: 10PX;
-    background-color: rgba(255, 255, 255, 0.884);
-    width: 150%;
-    height: 488%;
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 200%;
+    height: 288%;
     transition: all ease-in-out 0.5s;
     animation-name: dd;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin-top: 27px;
 }
 
 
@@ -117,4 +117,67 @@
 height: 25px;
 margin: 12%;
 }
+
+
+
+@media only screen and (max-width:900px) {
+    .topnav li p{
+        margin-left: 5%;
+        font-size: small;
+        margin-top: 8%;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    }
+ 
+
+    .topnav li {
+      border: none;
+      width: 80px;
+      margin-top: 1.5rem;
+   
+    }
+
+    .topnav{
+      
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+
+
+    .signup{
+        border-radius: 8px;
+        border:  solid 2pt rgba(255, 255, 255, 0.24);
+        height: 40px;
+        margin-left: 8%;
+    }
+
+    .login{
+        border-radius: 8px;
+        border:  solid 2pt rgba(255, 255, 255, 0.24);
+        height: 40px;
+        width: fit-content;   
+        margin-left: 1rem;
+    }
+
+    .faq{
+        display: none;
+    }
+
+   
+.drpdown li{
+    margin: 10%; 
+    border: solid 1pt transparent;
+    width: 90%;
+    height: 10%;
+    justify-content: center;
+    color: transparent;
+    cursor: pointer;
+    border-top: solid 2pt rgba(0, 0, 0, 0.178);
+    display: flex;
+    background-color:transparent;
+}
+    
+}
+
+
+
 
