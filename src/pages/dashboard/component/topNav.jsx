@@ -52,7 +52,7 @@ export const TopNav = () => {
             <li className="account">
               {" "}
               <img className="dp2" src={user1} alt="" />
-              <p>Account</p>
+              <p>Profile</p>
             </li>
             <li className="mylist">
               {" "}
@@ -62,7 +62,7 @@ export const TopNav = () => {
             <li className="faq">
               {" "}
               <img className="faqs" src={faq} alt="" />
-              <p>Query</p>
+              <p>About us</p>
             </li>
             <li className="">
               {" "}

@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import  '../styles/registrationStyle.css'
 import axios from 'axios';
-import { Navigate } from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 
 
 export const Registration = () => {
@@ -11,6 +12,7 @@ export const Registration = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const notifyInfo = (arg) => {
     toast.info(arg, {
@@ -53,7 +55,7 @@ export const Registration = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("Fields --> ", username, password, email);
+    // console.log("Fields --> ", username, password, email);
     const URL = "http://localhost:8080/api/bime/auth/register";
     let item = {
       username,
@@ -67,21 +69,27 @@ export const Registration = () => {
         .post(URL, item)
         .then((res) => {
           return res.data;
+      
         })
         .catch((error) => {
           return error;
         });
+     
 
       // console.log("res --> ", response);
 
         if (response.name === "AxiosError") {
-          notifyError("Register failed try login.");
+          notifyError("Register failed tr login.");
         } else {
           notifySuccess(response.message);
+          setTimeout(()=>{
+            navigate('/');
+          }, 2000);
         }
     } else {
       notifyInfo("Please fill the form below!");
     }
+    
   };
 
   return (
