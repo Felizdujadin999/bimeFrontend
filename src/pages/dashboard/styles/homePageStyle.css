@@ -100,6 +100,9 @@
     border-top: solid 1pt  rgba(255, 255, 255, 0.733);
     display: flex;
     justify-content: space-around;  
+    font-size: large;
+    color: white;
+    padding: 1rem;
 }
 
 

@@ -19,7 +19,6 @@ function HomePage (){
          <div className="homemain">
             <TopNav/> 
             <Hero/>
-
             <div className="aside1">
             <div className="box1"></div>
             <div className="box2"></div>
@@ -31,7 +30,7 @@ function HomePage (){
             </div>
 
             <div className="foot">
-               
+               Team production (c) 2023
             </div>    
         </div>
        </section>

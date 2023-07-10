@@ -62,6 +62,7 @@
 
 .ri-settings-3-fill{
     animation: rotate-animation 10s infinite linear;
+    color: var(--bg-color);
 }
 
 @keyframes rotate-animation {
