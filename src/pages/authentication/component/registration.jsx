@@ -4,6 +4,7 @@ import axios from 'axios';
 import { useNavigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+;
 
 
 
@@ -13,6 +14,8 @@ export const Registration = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+
+
 
   const notifyInfo = (arg) => {
     toast.info(arg, {
@@ -30,7 +33,7 @@ export const Registration = () => {
   const notifySuccess = (arg) => {
     toast.success(arg, {
       position: "top-center",
-      autoClose: 3000,
+      autoClose: 2000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
@@ -82,8 +85,9 @@ export const Registration = () => {
           notifyError("Register failed tr login.");
         } else {
           notifySuccess(response.message);
+          localStorage.setItem('username', username)
           setTimeout(()=>{
-            navigate('/');
+            navigate('/dashboard');
           }, 2000);
         }
     } else {

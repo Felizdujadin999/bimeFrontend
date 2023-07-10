@@ -1,7 +1,4 @@
 
-
-
-
 :root{
     --bg-color:#160225;
 }
@@ -11,7 +8,7 @@
 }
 
 
-.homemain{
+.usermain{
     height: 150vh;
     /* background-image: url(../../../assets/images/blury\ background.PNG); */
     background-size: cover;
@@ -24,7 +21,7 @@
     overflow: hidden;
 }
 
-.homemain::before{
+.usermain::before{
     content: '';
     position: absolute;
     height: 100%;
@@ -34,12 +31,12 @@
 
 
 
-.aside1{
+.useraside1{
     display: flex;
     height: 30%;
 }
 
-.box1{
+.userbox1{
     width: 30%;
     height: 80%;
     border-radius: 5px;
@@ -48,7 +45,7 @@
     margin-top: 2%;
 }
 
-.box2{
+.userbox2{
     width: 58%;
     height: 80%;
     border-radius: 5px;
@@ -58,13 +55,13 @@
 }
 
 
-.aside2{
+.useraside2{
     display: flex;
     height: 30%;
 }
 
 
-.box3{
+.userbox3{
     width: 30%;
     height: 80%;
     border-radius: 5px;
@@ -73,7 +70,7 @@
     margin-top: 1%;
 }
 
-.box4{
+.userbox4{
     width: 58%;
     height: 80%;
     border-radius: 5px;
@@ -87,7 +84,7 @@
 
 
 
-.foot{
+.userfoot{
     height: 0%;
     border-top: solid 1pt  rgba(255, 255, 255, 0.733);
     display: flex;
