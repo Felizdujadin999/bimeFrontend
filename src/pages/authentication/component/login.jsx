@@ -24,7 +24,7 @@ export const Login = () => {
   };
 
   const notifySuccess = (arg) => {
-    toast.success(arg, {
+    toast.success(arg + username, {
       position: "top-center",
       autoClose: 3000,
       hideProgressBar: false,
@@ -51,7 +51,7 @@ export const Login = () => {
 
   const handleLogSubmit = async (event) => {
     event.preventDefault();
-    console.log("Fields --> ", username, password);
+    // console.log("Fields --> ", username, password);
     const URL = "http://localhost:8080/api/bime/auth/login";
     let item = {
       username,
@@ -68,14 +68,14 @@ export const Login = () => {
           return error;
         });
 
-      // console.log("res --> ", response);
+    //   console.log("res --> ", response);
 
       if (response.name === "AxiosError") {
-        notifyError("Register failed try login.");
+    notifyError("Wrong details.");
       } else {
-        notifySuccess("Welcome ",username);
+        notifySuccess("Welcome ");
         setTimeout(() => {
-          navigate("/");
+          navigate("/dashboard");
         }, 2000);
       }
     } else {

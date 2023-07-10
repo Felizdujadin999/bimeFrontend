@@ -17,7 +17,7 @@ function HomePage (){
       </Helmet>
         </div>
          <div className="homemain">
-            <TopNav/> 
+            <TopNav /> 
             <Hero/>
             <div className="aside1">
             <div className="box1"></div>

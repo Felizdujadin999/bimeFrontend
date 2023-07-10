@@ -1,3 +1,17 @@
+
+
+.hero{
+    height: 25%;
+    width: 90%;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.733);
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+
+
+
 .color-switcher{
     width: 10rem;
     background-color: rgba(255, 255, 255, 0.87);
@@ -14,7 +28,7 @@
 }
 
 .color-switcher--open{
-    transform: translate(0%, 2%);
+    transform: translate(0%, 0%);
 }
 
 
@@ -40,9 +54,7 @@
     border-radius: 50%;
     background-color: var(--bg-color);
     border: solid 2pt rgba(87, 85, 85, 0.541);
-    cursor: pointer;
-    
-    
+    cursor: pointer;    
 }
 
 .cpb{

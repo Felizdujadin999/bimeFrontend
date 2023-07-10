@@ -1,5 +1,5 @@
 
-.topnav{
+.usertopnav{
     height: 8%;
     border-bottom: solid 1pt  rgba(245, 245, 245, 0.171);
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 
-.signup{
+.usersignup{
     border-radius: 8px;
     border:  solid 2pt rgba(255, 255, 255, 0.24);
     height: 40px;
@@ -19,7 +19,7 @@
 
 
 
-.login{
+.userlogin{
     border-radius: 8px;
     border:  solid 2pt rgba(255, 255, 255, 0.24);
     height: 40px;
@@ -30,7 +30,7 @@
 
 
 
-.dp{
+.userdp{
     
     border-radius: 50PX;
     width: 2rem;
@@ -43,7 +43,10 @@
 
 
 
-.topnav li{
+
+
+
+.usertopnav li{
     color: white;
     width: 8%;
     list-style: none;
@@ -55,7 +58,7 @@
 
 
 
-.topnav li p{
+.usertopnav li p{
     margin-left: 15%;
     font-size: small;
     margin-top: 8%;
@@ -63,26 +66,66 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.logo{
-    height: 20px;
-    margin-top: 40%;
+.userfaq{
+ 
+    width: 20%;
+    color: white;
+    padding-left: 4rem;
+    padding-top:0.5rem;
 }
 
-.user{
+
+
+
+.userdrpdown{
+    border-radius: 10PX;
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 198%;
+    height: 298%;
+    transition: all ease-in-out 0.5s;
+    animation-name: dd;
+    padding-bottom: 1rem;
+    margin-top: 28px;
+}
+
+
+
+.userdrpdown li{
+    margin: 15%;
+    border: solid 1pt transparent;
+    width: 80%;
+    height: 10%;
+    justify-content: center;
+    color: black;
+    cursor: pointer;
+    border-top: solid 2pt rgba(0, 0, 0, 0.178);
+    display: flex;
+    background-color:transparent;
+}
+
+
+
+
+.userdrpdown img{
+    height: 20px;
+    margin-right:0%;
+    margin-top: 8%;
+ 
+}
+
+.userdrpdown p{
+    font-size: 100rem;
+    margin: auto;
+    
+}
+
+.userlogo{
+    height: 20px;
+    margin-top: 40%;
+    float: left;
+}
+
+.useruser{
 height: 25px;
 margin: 12%;
 }
@@ -90,7 +133,7 @@ margin: 12%;
 
 
 @media only screen and (max-width:900px) {
-    .topnav li p{
+    .usertopnav li p{
         margin-left: 5%;
         font-size: small;
         margin-top: 8%;
@@ -98,28 +141,28 @@ margin: 12%;
     }
  
 
-    .topnav li {
+    .usertopnav li {
       border: none;
       width: 80px;
       margin-top: 1.5rem;
    
     }
 
-    .topnav{
+    .usertopnav{
       
         padding-right: 1.5rem;
         padding-left: 1.5rem;
     }
 
 
-    .signup{
+    .usersignup{
         border-radius: 8px;
         border:  solid 2pt rgba(255, 255, 255, 0.24);
         height: 40px;
         margin-left: 8%;
     }
 
-    .login{
+    .userlogin{
         border-radius: 8px;
         border:  solid 2pt rgba(255, 255, 255, 0.24);
         height: 40px;
@@ -127,12 +170,12 @@ margin: 12%;
         margin-left: 1rem;
     }
 
-    .faq{
+    .userfaq{
         display: none;
     }
 
    
-.drpdown li{
+.userdrpdown li{
     margin: 10%; 
     border: solid 1pt transparent;
     width: 90%;
