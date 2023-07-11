@@ -3,6 +3,7 @@ import React,{useState} from 'react';
 import axios from 'axios';
 import { useNavigate} from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const Login = () => {
   const bgColor = localStorage.getItem("color");
@@ -95,7 +96,7 @@ export const Login = () => {
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
           value={username}
-        />
+        />  
         <input
           className="logpassword"
           type="password"

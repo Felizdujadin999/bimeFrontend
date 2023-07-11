@@ -3,6 +3,7 @@ import '../styles/userPage.css'
 import { Helmet } from "react-helmet";
 import { Hero } from './hero';
 import { UserTopnav } from "./userTopnav";
+import ColorSwitcher from './colorSwitcher';
 
  export const UserPage = () =>{
 
@@ -18,6 +19,7 @@ import { UserTopnav } from "./userTopnav";
         </div>
          <div className="usermain">
             <UserTopnav /> 
+            <ColorSwitcher/>
             <Hero/>
             <div className="useraside1">
             <div className="userbox1"></div>

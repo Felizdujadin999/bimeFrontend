@@ -82,7 +82,7 @@ export const Registration = () => {
       // console.log("res --> ", response);
 
         if (response.name === "AxiosError") {
-          notifyError("Register failed tr login.");
+          notifyError("Register failed try login.");
         } else {
           notifySuccess(response.message);
           localStorage.setItem('username', username)

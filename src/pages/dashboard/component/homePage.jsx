@@ -2,6 +2,8 @@ import '../styles/homePageStyle.css'
 import { Helmet } from "react-helmet";
 import { Hero } from './hero';
 import { TopNav } from './topNav';
+import ColorSwitcher from './colorSwitcher';
+
 
 function HomePage (){
    
@@ -17,6 +19,7 @@ function HomePage (){
       </Helmet>
         </div>
          <div className="homemain">
+            <ColorSwitcher/>
             <TopNav /> 
             <Hero/>
             <div className="aside1">
