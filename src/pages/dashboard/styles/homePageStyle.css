@@ -31,7 +31,27 @@
     filter: blur(10px);
 }
 
+.iconfinder{
+    display: flex;
+    height: fit-content;
+    width: fit-content;
+    border: solid 1pt green;
+}
 
+
+.ipt{
+    border: solid 1pt red;
+    padding:.4rem ;  
+    margin: 2rem;
+    border-radius: 5px;
+}
+
+.icons{
+    height: 28px;
+    width: 28px ;
+    border: solid 1pt red;
+    margin-top: 2rem;
+}
 
 
 .aside1{

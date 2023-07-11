@@ -1,17 +1,19 @@
-import React ,{ useState}from "react";
-import user from '../../../assets/images/user (1).png'
-import user1 from '../../../assets/images/user.png'
-import bimelogo from '../../../assets/images/bime.svg'
-import '../styles/userTopnav.css'
-import help from '../../../assets/images/help.svg';
-import list from '../../../assets/images/list.svg';
-import faq from '../../../assets/images/support.svg'
-import logout from '../../../assets/images/logoutpng.png'
+import React, { useState } from "react";
+import user from "../../../assets/images/user (1).png";
+import user1 from "../../../assets/images/user.png";
+import bimelogo from "../../../assets/images/bime.svg";
+import "../styles/userTopnav.css";
+import help from "../../../assets/images/help.svg";
+import list from "../../../assets/images/list.svg";
+import faq from "../../../assets/images/support.svg";
+import logout from "../../../assets/images/logoutpng.png";
+import PopUp from "./popUp";
 
-export const UserTopnav =()=>{
+export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
-  const username = localStorage.getItem('username')
+  const [buttonPopUp, setButtonPopUp] = useState(false);
+  const username = localStorage.getItem("username");
 
   const handleDropDowns = () => {
     setDropdownOpens(!dropDownOpens);
@@ -21,7 +23,6 @@ export const UserTopnav =()=>{
     setOpenInboxs(!openInboxss);
   };
 
-    
   return (
     <nav className="usertopnav">
       <div>
@@ -37,20 +38,21 @@ export const UserTopnav =()=>{
         </div>
         {dropDownOpens && (
           <div className="userdrpdown" onClick={toggleInboxs}>
-            <li className="useraccount">
+            <li className="useraccount" onClick={() => setButtonPopUp(true)}>
               {" "}
               <img className="userdp2" src={user1} alt="" />
               <p>Profile</p>
             </li>
+
             <li className="usermylist">
               {" "}
               <img className="userls" src={list} alt="" />
-              <p>my list</p>
+              <p>Restricted</p>
             </li>
             <li className="faq">
               {" "}
               <img className="userls" src={faq} alt="" />
-              <p>About us</p>
+              <p>Bime?</p>
             </li>
             <li className="">
               {" "}
@@ -64,7 +66,12 @@ export const UserTopnav =()=>{
           </div>
         )}
       </div>
+      <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+        <div className="dpholder">
+          <div className="innerdpholder"></div>
+        </div>
+        <h3 className="proilename">{username} profile</h3>
+      </PopUp>
     </nav>
   );
- 
-}
+};

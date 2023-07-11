@@ -1,0 +1,66 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 63vh;
+    display: flex;
+    background-color:#fff;
+    border-radius: 8px;
+    margin-top: 105px;
+    margin-left: 299px;
+    padding: 2rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.179);
+   
+}
+
+popup-inner{
+    box-shadow: inset black;
+    position: relative;
+    padding: 2px;
+    width: 100%;
+    max-width: 1640px;
+    background-color: #fff;
+    
+   
+}
+
+ .close-btn{
+    position: absolute;
+    top: 1px;
+    right: 26px;
+    background: var(--bg-color);
+    width: 100px;
+    height: 30px;
+    font-size: smaller;
+  
+}
+
+.popup ::content{
+    filter: blur(10px);
+}
+
+
+.dpholder{
+
+    height: 9rem;
+    width: 9rem;
+    border: solid 2pt var(--bg-color);
+    border-radius: 50%;
+    
+}
+
+.innerdpholder{
+
+    height: 8rem;
+    width: 8rem;
+    border: solid 4pt var(--bg-color);
+    border-radius: 50%;
+   margin: 0.2rem;
+    
+}
+
+
+.proilename{
+    margin-left: 1rem;
+}
