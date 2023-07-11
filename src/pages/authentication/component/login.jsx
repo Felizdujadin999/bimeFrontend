@@ -1,9 +1,8 @@
 import  '../styles/loginStyle.css';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify/dist/components';
-import { ToastContainer } from 'react-toastify/dist/components';
+import React,{useState} from 'react';
 import axios from 'axios';
+import { useNavigate} from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export const Login = () => {
@@ -102,7 +101,7 @@ export const Login = () => {
           className="logpassword"
           type="password"
           maxLength={8}
-          placeholder="********"
+          placeholder="****"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
