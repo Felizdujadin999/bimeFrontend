@@ -96,7 +96,7 @@ export const Login = () => {
           placeholder="username"
           onChange={(e) => setUsername(e.target.value)}
           value={username}
-        />
+        />  
         <input
           className="logpassword"
           type="password"

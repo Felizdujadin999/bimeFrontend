@@ -4,8 +4,7 @@
     border-bottom: solid 1pt  rgba(245, 245, 245, 0.171);
     display: flex;
     justify-content: space-around;
-    
-
+    transition: all ease-in-out 1s;
    
 }
 
@@ -35,10 +34,10 @@
     border-radius: 50PX;
     width: 2rem;
     height: 2rem;
-    margin-left: 39%;
     border: solid 2pt rgba(255, 255, 255, 0.329);
     margin-top: 25px;
-    
+    transition: all ease-in-out 1s;
+    justify-content: center;
 }
 
 
@@ -82,10 +81,9 @@
     background-color: rgba(255, 255, 255, 0.945);
     width: 198%;
     height: 298%;
-    transition: all ease-in-out 0.5s;
-    animation-name: dd;
     padding-bottom: 1rem;
     margin-top: 28px;
+    transition: all ease-in-out 1s;
 }
 
 
