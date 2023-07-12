@@ -1,12 +1,8 @@
 import React, {useState} from "react";
 import user from '../../../assets/images/user (1).png'
-import user1 from '../../../assets/images/user.png'
 import bimelogo from '../../../assets/images/bime.svg'
 import '../styles/topnav.css'
-import help from '../../../assets/images/help.svg';
-import list from '../../../assets/images/list.svg';
-import faq from '../../../assets/images/support.svg'
-import logout from '../../../assets/images/logoutpng.png'
+
 
 export const TopNav = (props) => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
