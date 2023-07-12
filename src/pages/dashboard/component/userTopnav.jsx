@@ -8,11 +8,18 @@ import list from "../../../assets/images/list.svg";
 import faq from "../../../assets/images/support.svg";
 import logout from "../../../assets/images/logoutpng.png";
 import PopUp from "./popUp";
+import { InputText } from "primereact/inputtext";
+import { Dialog } from "primereact/dialog";
+
+
+
 
 export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [image, setImage] = useState("");
+  const [imageCrop, setImageCrop] = useState('');
   const username = localStorage.getItem("username");
 
   const handleDropDowns = () => {
@@ -68,9 +75,33 @@ export const UserTopnav = () => {
       </div>
       <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
         <div className="dpholder">
-          <div className="innerdpholder"></div>
+          <div className="innerdpholder">
+            <img src={user} alt=""  className="maindp"/>
+          </div>
         </div>
-        <h3 className="proilename">{username} profile</h3>
+        <h3 className="proilename">{username}</h3>
+        <Dialog
+        visible={imageCrop}
+        header={()=>(
+          <p>
+            update profile
+          </p>
+        )}
+        
+        >  
+        </Dialog>
+        <InputText
+          type="file"
+          accept="/image/*"
+          onChange={(e) => {
+            const file = e.target.files[0];
+            if (file && file.type.substring(0, 5) === "image") {
+              setImage(file);
+            } else {
+              setImage(null);
+            }
+          }}
+        />
       </PopUp>
     </nav>
   );
