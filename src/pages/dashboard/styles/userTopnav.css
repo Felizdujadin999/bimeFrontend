@@ -38,6 +38,7 @@
     margin-top: 25px;
     transition: all ease-in-out 1s;
     justify-content: center;
+    z-index: 4;
 }
 
 
@@ -84,6 +85,7 @@
     padding-bottom: 1rem;
     margin-top: 28px;
     transition: all ease-in-out 1s;
+    z-index: 10;
 }
 
 
@@ -130,6 +132,17 @@
 height: 25px;
 margin: 12%;
 }
+
+
+
+.inputimg{
+    border: solid 1pt gray;
+    padding: 1rem;
+    border-radius: 8px;
+    
+}
+
+
 
 
 

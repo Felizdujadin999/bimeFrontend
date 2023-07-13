@@ -14,11 +14,12 @@ import { Dialog } from "primereact/dialog";
 
 
 
+
 export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState(user);
   const [imageCrop, setImageCrop] = useState('');
   const username = localStorage.getItem("username");
 
@@ -76,7 +77,7 @@ export const UserTopnav = () => {
       <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
         <div className="dpholder">
           <div className="innerdpholder">
-            <img src={user} alt=""  className="maindp"/>
+            <img src={image} alt=""  className="maindp"/>
           </div>
         </div>
         <h3 className="proilename">{username}</h3>
@@ -86,11 +87,12 @@ export const UserTopnav = () => {
           <p>
             update profile
           </p>
-        )}
-        
+        )} onHide={()=> setImageCrop(false)}
+
         >  
         </Dialog>
         <InputText
+        className="inputimg"
           type="file"
           accept="/image/*"
           onChange={(e) => {
