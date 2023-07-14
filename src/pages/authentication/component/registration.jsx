@@ -30,6 +30,21 @@ export const Registration = () => {
     });
   };
 
+
+
+  const notifyRedir = (arg) => {
+    toast.info(arg, {
+      position: "top-center",
+      autoClose:5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  }
+
   const notifySuccess = (arg) => {
     toast.success(arg, {
       position: "top-center",
@@ -56,7 +71,7 @@ export const Registration = () => {
     });
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async (event) => {  
     event.preventDefault();
     // console.log("Fields --> ", username, password, email);
     const URL = "http://localhost:8080/api/bime/auth/register";
@@ -79,15 +94,15 @@ export const Registration = () => {
         });
      
 
-      // console.log("res --> ", response);
+    
 
         if (response.name === "AxiosError") {
           notifyError("Register failed try login.");
         } else {
           notifySuccess(response.message);
-          localStorage.setItem('username', username)
+          localStorage.setItem('username', response.username)
           setTimeout(()=>{
-            navigate('/dashboard');
+            notifyRedir('we sent a verification link to your email.');
           }, 2000);
         }
     } else {
