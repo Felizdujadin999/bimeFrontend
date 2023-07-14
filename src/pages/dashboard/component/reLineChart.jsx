@@ -8,7 +8,7 @@ import { LineChart, Line, XAxis, CartesianGrid, Tooltip } from "recharts";
   var days = [];
   for (var i = 0; i < 7; i++){
       days[i] = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 1 + i).toDateString();
-      console.log(days[i]);
+     
   }
 
  

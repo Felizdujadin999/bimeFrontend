@@ -143,6 +143,11 @@ margin: 12%;
 }
 
 
+.updateusernamebox{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 
 

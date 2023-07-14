@@ -19,28 +19,29 @@ const onCrop = (view) =>{
 
 }
 
-const dpstyle ={
- 
-    border : 'solid 2pt red',
-    fontSize: '5px',
-    width: '1rem',
-    height: '1rem'
-}
+
+
+
+
 
   return (
     
     
-    <div>  
-         {preview &&  <img src={preview} style={{dpstyle}}  alt=''/> }
+    <div className='uploadav'>  
+         {preview &&  <img src={preview} className='prevcrop'  alt=''/> }
+
      <Avatar
      width={250}
      height={250}
      onCrop={onCrop}
      onClose={onClose}
+     className = 'avartarprev'
      
      src={src}
     
      />
+
+    <button className='save-btn' onClick ={onClose}>save</button>
      
     </div>
   );

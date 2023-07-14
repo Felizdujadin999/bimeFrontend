@@ -9,14 +9,11 @@ import logout from "../../../assets/images/logoutpng.png";
 import PopUp from "./popUp";
 import UploadAvatar from "./uploadAvatar";
 
-
-
-
-
 export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [newUsername, setNewUsername] = useState("");
   const username = localStorage.getItem("username");
 
   const handleDropDowns = () => {
@@ -27,7 +24,7 @@ export const UserTopnav = () => {
     setOpenInboxs(!openInboxss);
   };
 
-  const userdp = localStorage.getItem('userdp')
+  const userdp = localStorage.getItem("userdp");
 
   return (
     <nav className="usertopnav">
@@ -35,7 +32,7 @@ export const UserTopnav = () => {
         <img className="userlogo" src={bimelogo} alt="" />
       </div>
       <div className="userfaq">
-        <h3>Hi {username} 😊✔</h3>
+        <h3>Hi {username} ✔</h3>
       </div>
 
       <div>
@@ -73,8 +70,19 @@ export const UserTopnav = () => {
         )}
       </div>
       <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-        <UploadAvatar/>
-        <h3>{username}</h3>    
+        <p>Edit you profile picture </p>
+        <UploadAvatar />
+        <br />
+        <div className="updateusernamebox">
+          Edit your username
+          <input
+            type="text"
+            className="editusernamebox"
+            value={newUsername}
+            onChange={(e) => setNewUsername(e.target.value)}
+            placeholder={username}
+          />
+        </div>
       </PopUp>
     </nav>
   );
