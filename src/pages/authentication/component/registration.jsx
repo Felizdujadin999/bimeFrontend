@@ -94,13 +94,13 @@ export const Registration = () => {
         });
      
 
-      // console.log("res --> ", response);
+    
 
         if (response.name === "AxiosError") {
           notifyError("Register failed try login.");
         } else {
           notifySuccess(response.message);
-          localStorage.setItem('username', username)
+          localStorage.setItem('username', response.username)
           setTimeout(()=>{
             notifyRedir('we sent a verification link to your email.');
           }, 2000);

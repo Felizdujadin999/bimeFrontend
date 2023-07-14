@@ -4,52 +4,61 @@ import { LineChart, Line, XAxis, CartesianGrid, Tooltip } from "recharts";
 
 
 
-var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const date = new Date()
+  var days = [];
+  for (var i = 0; i < 7; i++){
+      days[i] = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 1 + i).toDateString();
+      console.log(days[i]);
+  }
 
-const date = new Date(); 
-const day = date.getDay();
+ 
+
+
+
+
+
 
 const data = [
   {
-    name: days[day],
-    uv: 3490,
-    pv: 4300,
+    name: days[0],
+    hr:55,
+    min: 4300,
     amt: 2100,
   },
   {
-    name:days[date.getDay()+1] ,
-    uv: 3000,
-    pv: 1398,
+    name:days[1] ,
+    hr: 3000,
+    min: 1398,
     amt: 2210,
   },
   {
-    name: days[date.getDay()+2],
-    uv: 2000,
-    pv: 9800,
+    name: days[2],
+    hr: 2000,
+    min: 9800,
     amt: 2290,
   },
   {
-    name: days[day+2],
-    uv: 2780,
-    pv: 3908,
+    name: days[3],
+    hr: 2780,
+    min: 3908,
     amt: 2000,
   },
   {
-    name: "Friday",
-    uv: 0,
-    pv: 4800,
+    name: days[4],
+    hr: 0,
+    min: 4800,
     amt: 2181,
   },
   {
-    name: "Saturday",
-    uv: 2390,
-    pv: 3800,
+    name: days[5],
+    hr: 2390,
+    min: 3800,
     amt: 2500,
   },
   {
-    name: "Sunday",
-    uv: 3490,
-    pv: 4300,
+    name: days[6],
+    hr: 3490,
+    min: 4300,
     amt: 2100,
   },
 ];
@@ -69,8 +78,8 @@ function ReLineChart() {
         <XAxis dataKey="name" />
         <Tooltip />
         <CartesianGrid stroke="#f5f5f5" />
-        <Line type="monotone" dataKey="uv" stroke="#ff7300" yAxisId={0} />
-        <Line type="monotone" dataKey="pv" stroke="#387908" yAxisId={1} />
+        <Line type="monotone" dataKey="hr" stroke="#ff7300" yAxisId={4} />
+        <Line type="monotone" dataKey="min" stroke="#387908" yAxisId={1} />
       </LineChart>
     </div>
   );
