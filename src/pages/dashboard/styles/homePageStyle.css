@@ -38,6 +38,18 @@
     border: solid 1pt green;
 }
 
+.video{
+    margin-top: 2%;
+    margin-left: 10%;
+    width: 20rem;
+    height: 220px;
+  }
+  
+
+  .video::-webkit-media-controls {
+    display: none;
+  }
+
 
 .ipt{
     border: solid 1pt red;
@@ -120,6 +132,3 @@
 
 
 
-@media only screen and (max-width:500px) {
-    
-}

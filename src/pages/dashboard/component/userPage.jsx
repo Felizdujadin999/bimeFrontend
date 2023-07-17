@@ -1,9 +1,11 @@
 import React from "react";
 import '../styles/userPage.css'
 import { Helmet } from "react-helmet";
-import { Hero } from './hero';
+import UserHero from "./userHero";
 import { UserTopnav } from "./userTopnav";
 import ColorSwitcher from './colorSwitcher';
+import ProgressBars from "./progressBar";
+
 
  export const UserPage = () =>{
 
@@ -12,7 +14,7 @@ import ColorSwitcher from './colorSwitcher';
 
         <div>
         <Helmet>
-        <link rel="icon" type="image/png"  sizes='16x16' href="../../../assets/images/bme icon.PNG" />
+        <link rel="icon" type="image/png"  sizes='32x32' href="../../../assets/images/bme icon.PNG" />
         <title>bime.</title>
         <meta name="description" content="My app description" />
       </Helmet>
@@ -20,10 +22,14 @@ import ColorSwitcher from './colorSwitcher';
          <div className="usermain">
             <UserTopnav /> 
             <ColorSwitcher/>
-            <Hero/>
+            <UserHero/>
             <div className="useraside1">
             <div className="userbox1"></div>
-            <div className="userbox2"></div>
+            <div className="userbox2">
+                <div className="pbars">
+                    <ProgressBars/>
+                </div>
+            </div>
             </div>
 
             <div className="useraside2">

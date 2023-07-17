@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import user from "../../../assets/images/user (1).png";
 import user1 from "../../../assets/images/user.png";
 import bimelogo from "../../../assets/images/bime.svg";
 import "../styles/userTopnav.css";
@@ -8,18 +7,18 @@ import list from "../../../assets/images/list.svg";
 import faq from "../../../assets/images/support.svg";
 import logout from "../../../assets/images/logoutpng.png";
 import PopUp from "./popUp";
-import { InputText } from "primereact/inputtext";
-import { Dialog } from "primereact/dialog";
+import UploadAvatar from "./uploadAvatar";
+import { useNavigate } from "react-router-dom";
+
 
 
 
 
 export const UserTopnav = () => {
+  const navigate = useNavigate();
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
-  const [image, setImage] = useState("");
-  const [imageCrop, setImageCrop] = useState('');
   const username = localStorage.getItem("username");
 
   const handleDropDowns = () => {
@@ -29,6 +28,8 @@ export const UserTopnav = () => {
   const toggleInboxs = () => {
     setOpenInboxs(!openInboxss);
   };
+
+  const userdp = localStorage.getItem('userdp')
 
   return (
     <nav className="usertopnav">
@@ -41,14 +42,14 @@ export const UserTopnav = () => {
 
       <div>
         <div className="userdp" onClick={handleDropDowns}>
-          <img className="useruser" src={user} alt="" />{" "}
+          <img className="useruser" src={userdp} alt="" />{" "}
         </div>
         {dropDownOpens && (
           <div className="userdrpdown" onClick={toggleInboxs}>
             <li className="useraccount" onClick={() => setButtonPopUp(true)}>
               {" "}
               <img className="userdp2" src={user1} alt="" />
-              <p>Profile</p>
+              <p>Edit profile</p>
             </li>
 
             <li className="usermylist">
@@ -56,7 +57,7 @@ export const UserTopnav = () => {
               <img className="userls" src={list} alt="" />
               <p>Restricted</p>
             </li>
-            <li className="faq">
+            <li className="faq" onClick={navigate("/aboutUs")}>
               {" "}
               <img className="userls" src={faq} alt="" />
               <p>Bime?</p>
@@ -74,34 +75,8 @@ export const UserTopnav = () => {
         )}
       </div>
       <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-        <div className="dpholder">
-          <div className="innerdpholder">
-            <img src={user} alt=""  className="maindp"/>
-          </div>
-        </div>
-        <h3 className="proilename">{username}</h3>
-        <Dialog
-        visible={imageCrop}
-        header={()=>(
-          <p>
-            update profile
-          </p>
-        )}
-        
-        >  
-        </Dialog>
-        <InputText
-          type="file"
-          accept="/image/*"
-          onChange={(e) => {
-            const file = e.target.files[0];
-            if (file && file.type.substring(0, 5) === "image") {
-              setImage(file);
-            } else {
-              setImage(null);
-            }
-          }}
-        />
+        <UploadAvatar/>
+        <h3>{username}</h3>    
       </PopUp>
     </nav>
   );
