@@ -1,11 +1,9 @@
 import React from "react";
-import user from '../../../assets/images/user (1).png'
-import bimelogo from '../../../assets/images/bime.svg'
-import '../styles/topnav.css'
-
+import user from "../../../assets/images/user (1).png";
+import bimelogo from "../../../assets/images/bime.svg";
+import "../styles/topnav.css";
 
 export const TopNav = () => {
- 
   const toLogin = () => {
     window.location.href = "/login";
   };
@@ -30,7 +28,7 @@ export const TopNav = () => {
         <p>Login</p>
       </li>
       <div>
-        <div className="dp" >
+        <div className="dp">
           <img className="user" src={user} alt="" />{" "}
         </div>
       </div>

@@ -19,7 +19,10 @@ export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
+  const [newUsername, setNewUsername] = useState("");
+  const [logBotton, setLogBotton] = useState(false);
   const username = localStorage.getItem("username");
+  const userdp = localStorage.getItem("userdp");
 
   const handleDropDowns = () => {
     setDropdownOpens(!dropDownOpens);
@@ -29,7 +32,6 @@ export const UserTopnav = () => {
     setOpenInboxs(!openInboxss);
   };
 
-  const userdp = localStorage.getItem('userdp')
 
   return (
     <nav className="usertopnav">
@@ -37,7 +39,7 @@ export const UserTopnav = () => {
         <img className="userlogo" src={bimelogo} alt="" />
       </div>
       <div className="userfaq">
-        <h3>Hi {username} 😊✔</h3>
+        <h3>Hi {username} ✔</h3>
       </div>
 
       <div>
@@ -46,13 +48,17 @@ export const UserTopnav = () => {
         </div>
         {dropDownOpens && (
           <div className="userdrpdown" onClick={toggleInboxs}>
-            <li className="useraccount" onClick={() => setButtonPopUp(true)}>
+            <li className="useraccount" onClick={() =>{ 
+              setButtonPopUp(true) 
+              setLogBotton(false)
+            }
+              }>
               {" "}
               <img className="userdp2" src={user1} alt="" />
               <p>Edit profile</p>
             </li>
 
-            <li className="usermylist">
+            <li className="usermylist" >
               {" "}
               <img className="userls" src={list} alt="" />
               <p>Restricted</p>
@@ -67,17 +73,42 @@ export const UserTopnav = () => {
               <img className="userhp" src={help} alt="" />
               <p>Help</p>
             </li>
-            <li className="userlogout">
+            <li className="userlogout" onClick={() =>{ 
+              setLogBotton(true)
+              setButtonPopUp(false)
+              
+              }}>
               <img className="userlg" src={logout} alt="" />
               <p>Sign out</p>
             </li>
           </div>
         )}
       </div>
+      {
       <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-        <UploadAvatar/>
-        <h3>{username}</h3>    
+        <p>Edit you profile picture </p>
+        <UploadAvatar />
+        <br />
+        <div className="updateusernamebox">
+          Edit your username
+          <input
+            type="text"
+            className="editusernamebox"
+            value={newUsername}
+            onChange={(e) => setNewUsername(e.target.value)}
+            placeholder={username}
+          />
+        </div>
       </PopUp>
+      }
+
+      {
+        <LogOutPopUp trigger={logBotton} setTrigger={setLogBotton}>
+          <h1 className="confirm">Are you sure you want to logout?</h1>
+          <button className="logno">No</button>
+          <button className="logyes">Yes</button>
+        </LogOutPopUp>
+      }
     </nav>
   );
 };

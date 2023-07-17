@@ -3,32 +3,29 @@ import ReLineChart from "./reLineChart";
 import "../styles/userHero.css";
 
 function UserHero() {
-  
-
-  const date = new Date()
-  var days = [];
-  for (var i = 0; i < 7; i++){
-      days[i] = new Date(date.getFullYear(), date.getMonth(), date.getDate() - date.getDay() + 1 + i).toDateString();
-      console.log(days[i]);
-  }
-
-const prodp = localStorage.getItem('userdp');
+  const username = localStorage.getItem("username");
+  const date = new Date();
+  const dateOptions = {
+    timeZone: "UTC",
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  };
+  const prodp = localStorage.getItem("userdp");
 
   return (
     <div className="userhero">
       <div className="das">
-            <img src={prodp} alt=""  className="dashdp"/>
-        <h1 className="dbw">Dashboard</h1>
-        <p className="dbp">    
-           <span className="dashdate">
-              {days[4]}
-           </span>
-         
-       
+        <img src={prodp} alt="" className="dashdp" />
+
+        <h1 className="dbw">{username}</h1>
+        <p className="dbp">
+          <span className="dashdate">
+            {date.toLocaleDateString("en-US", dateOptions)}
+          </span>
         </p>
       </div>
       <ReLineChart />
-      
     </div>
   );
 }

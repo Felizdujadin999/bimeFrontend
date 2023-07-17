@@ -1,0 +1,80 @@
+.logpopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 33vh;
+    display: flex;
+    background-color:#fff;
+    border-radius: 8px;
+    margin-top: 205px;
+    margin-left: 339px;
+    padding: 3rem;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.179);
+    z-index: 3;
+   
+}
+
+logpopup-inner{
+    box-shadow: inset black;
+    position: relative;
+    padding: 1px;
+    width: 100%;
+    max-width: 1640px;
+    background-color: #ffffffc3;
+    
+   
+}
+
+
+.closelog-btn{
+    position: absolute;
+    top: 1px;
+    right: 26px;
+    background: var(--bg-color);
+    width: 100px;
+    height: 30px;
+    font-size: smaller;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    color: #fff;
+  
+}
+
+
+.logyes{
+  margin-left: 5rem; 
+  background-color: grey; 
+  border: none;
+  outline: none;
+  top: 1px;
+  right: 26px;
+  width: 100px;
+  height: 30px;
+  font-size: smaller;
+  border-radius: 5px;
+  color: #fff;
+
+}
+
+.logno{
+    margin-left: 8rem;
+    top: 1px;
+    right: 26px;
+    width: 100px;
+    height: 30px;
+    font-size: smaller;
+    border: none;
+    outline: none;
+    background: var(--bg-color);
+    border-radius: 5px;
+    color: white;
+}
+
+.confirm{
+    margin-top: 5rem;
+    margin-left: 8rem;
+    color: var(--bg-color);
+}
