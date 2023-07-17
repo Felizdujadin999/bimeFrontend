@@ -6,7 +6,6 @@ import { UserTopnav } from "./userTopnav";
 import ColorSwitcher from "./colorSwitcher";
 import ProgressBars from "./progressBar";
 
-
 export const UserPage = () => {
   return (
     <section className="usermap">
@@ -28,21 +27,25 @@ export const UserPage = () => {
         <UserHero />
         <div className="useraside1">
           <div className="userbox1">
-            <div
-              className="but-ton"
-            >
-              <p className="btn-Text">
-                Download Extension
-              </p>
-
-              <div className="btn-Two">
-                <p className="btn-Text2">bime.</p>
-              </div>
+            <div className="dowloadsteps">
+              <p className="stepsh">bime easy steps </p>
+             <li>Download Extension. </li>
+             <li>Turn extension on.</li>
+             <li>Select site to block.</li>
+             <li>Select time to access site.</li>
+             <li>Track time online!</li>
             </div>
+                <div className="but-ton">
+                  <p className="btn-Text">Download Extension</p>
+
+                  <div className="btn-Two">
+                    <p className="btn-Text2">bime.</p>
+                  </div>
+                </div>
           </div>
           <div className="userbox2">
             <div className="pbars">
-                <h1 className="tt">Tracked Time.</h1>
+              <h1 className="tt">Tracked Time.</h1>
               <ProgressBars />
             </div>
           </div>
