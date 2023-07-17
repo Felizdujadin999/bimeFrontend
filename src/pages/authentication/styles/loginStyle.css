@@ -47,6 +47,7 @@ placeholder-shown{
 
 .logbutton{
     height: 50px;
+    width: 100%;
     border-radius: 8px;
     outline: none;
     color: white;

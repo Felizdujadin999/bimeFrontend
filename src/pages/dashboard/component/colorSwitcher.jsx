@@ -4,7 +4,7 @@ import  ColorItem  from "./color-item";
 
 const ColorSwitcher =()=>{
     
-    const colors = ["#160225", "#30021b", "#022325", "#022c06", "#454907", '#490707', '#262626de', '#5c5b5b','#6b4705']
+    const colors = ["#2F4F4F", "#4B0082", "#C71585", "#3CB371", "#32CD32", '#008B8B', '	#8B0000', '#BDB76B','#6b4705']
 
     const [state, setState] = useState(false);
 
