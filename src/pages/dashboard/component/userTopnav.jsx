@@ -7,9 +7,13 @@ import list from "../../../assets/images/list.svg";
 import faq from "../../../assets/images/support.svg";
 import logout from "../../../assets/images/logoutpng.png";
 import PopUp from "./popUp";
-import UploadAvatar from "./uploadAvatar";
 import LogOutPopUp from "./logOutPopUp";
 import { useNavigate } from "react-router-dom";
+import UploadAvatar from "./uploadAvatar";
+
+
+
+
 
 export const UserTopnav = () => {
   const [dropDownOpens, setDropdownOpens] = useState(false);
@@ -24,6 +28,10 @@ export const UserTopnav = () => {
   const handleDropDowns = () => {
     setDropdownOpens(!dropDownOpens);
   };
+
+  const toAboutUs = () => {
+    window.location.href="/AboutUs";
+  }
 
   const toggleInboxs = () => {
     setOpenInboxs(!openInboxss);
@@ -64,7 +72,9 @@ export const UserTopnav = () => {
               <img className="userls" src={list} alt="" />
               <p>Restricted</p>
             </li>
-            <li className="faq">
+            <li className="faq" onClick={() =>{
+              toAboutUs()
+            }}>
               {" "}
               <img className="userls" src={faq} alt="" />
               <p>Bime?</p>

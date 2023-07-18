@@ -14,6 +14,7 @@
 .homemain{
     height: 150vh;
     /* background-image: url(../../../assets/images/blury\ background.PNG); */
+    width: 100%;
     background-size: cover;
     border: solid 1pt transparent;
     background-color: var(--bg-color);

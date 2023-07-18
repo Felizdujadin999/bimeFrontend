@@ -101,7 +101,7 @@ export const Login = () => {
           className="logpassword"
           type="password"
           maxLength={8}
-          placeholder="********"
+          placeholder="****"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
         />

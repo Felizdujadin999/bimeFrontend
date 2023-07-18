@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Avatar from "react-avatar-edit";
-import {Cloudinary} from "@cloudinary/url-gen";
-import { unstable_HistoryRouter } from "react-router-dom";
+// import {Cloudinary} from "@cloudinary/url-gen";
+// import { unstable_HistoryRouter } from "react-router-dom";
 
 function UploadAvatar() {
   // const [src, setSrc] = useState(null);

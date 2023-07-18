@@ -1,0 +1,90 @@
+:root{
+    --bg-color:#160225;
+}
+
+
+
+.abtMain-container{
+    width: 100vw;
+    overflow-x: hidden;
+   
+    
+}
+.abtupper{
+    height: 19%;
+    border-bottom: solid 2pt  rgba(245, 245, 245, 0.192);
+    overflow-x: hidden;
+}
+
+.abtabout{
+     font-family: sans-serif;
+     padding-top: 2%;
+     margin-left: 6%;
+     font-weight: 700;
+     font-size: x-large;
+     display: flex;
+     margin-bottom: 2%;
+     color: white;
+     padding: 1rem;
+     overflow-x: hidden;
+}
+.abtdetails{
+    padding-top: 3%;
+    margin: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 12%;
+    color: white;
+    padding: 1rem;
+    overflow-x: hidden;
+}
+.abtsection{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    overflow-x: hidden; 
+}
+.abtsection {
+    margin-left: 50px;
+    overflow-x: hidden;
+}
+.abtsection h2{
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    color: white;
+    overflow-x: hidden;
+}
+.abtsection .cards{
+    display: grid;
+    overflow-x: hidden;
+}
+.abtsection p{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
+}
+.abtsection .abtcards .abttext-card{
+    margin: 10px;
+    padding: 30px;
+    overflow-x: hidden;
+}
+.abtsection .abtcards .abttext-card p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+}
+.abtother p{
+    align-items: center;
+    padding-left: 10%; 
+    padding-bottom: 2%;
+    overflow-x: hidden;
+}
+
+
+@media (max-width: 900px){
+    section .cards{
+        flex-direction: column;
+    }
+}
