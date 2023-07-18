@@ -5,10 +5,16 @@ import UserHero from "./userHero";
 import { UserTopnav } from "./userTopnav";
 import ColorSwitcher from "./colorSwitcher";
 import ProgressBars from "./progressBar";
+import  Lottie  from "lottie-react";
+import clock from '../../../assets/images/animation_lk0a16hk.json'
 
 export const UserPage = () => {
+
+
+
+
   return (
-    <section className="usermap">
+    <section className= 'usermap' >
       <div>
         <Helmet>
           <link
@@ -21,11 +27,11 @@ export const UserPage = () => {
           <meta name="description" content="My app description" />
         </Helmet>
       </div>
-      <div className="usermain">
-        <UserTopnav />
+      <div  className="usermain" >
+        <UserTopnav/>
         <ColorSwitcher />
-        <UserHero />
-        <div className="useraside1">
+        <UserHero  />
+        <div className="useraside1" id='map2'>
           <div className="userbox1">
             <div className="dowloadsteps">
               <p className="stepsh">bime easy steps </p>
@@ -45,13 +51,16 @@ export const UserPage = () => {
           </div>
           <div className="userbox2">
             <div className="pbars">
+              <div className="trackbox">
               <h1 className="tt">Tracked Time.</h1>
+              <Lottie  className='clock' animationData={clock}></Lottie>
+              </div>
               <ProgressBars />
             </div>
           </div>
         </div>
 
-        <div className="useraside2">
+        <div className="useraside2" id='map3'>
           <div className="userbox3"></div>
           <div className="userbox4"></div>
         </div>
