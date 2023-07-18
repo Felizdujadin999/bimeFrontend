@@ -1,0 +1,68 @@
+.Main-conatiner{
+    background: var(--bg-color);
+    width: 100vw;
+}
+.upper{
+    height: 19%;
+    border-bottom: solid 2pt  rgba(245, 245, 245, 0.192);
+}
+span{
+    background: var(--bg-color);
+}
+.about{
+     font-family: sans-serif;
+     padding-top: 2%;
+     margin-left: 6%;
+     font-weight: 700;
+     font-size: x-large;
+     display: flex;
+     margin-bottom: 2%;
+}
+.details{
+    padding-top: 3%;
+    margin: auto;
+    max-width: 640px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 12%;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+section .container{
+    margin: 100px;
+}
+section h2{
+    font-size: 40px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+section .cards{
+    display: grid;
+}
+section p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section .cards .text-card{
+    margin: 10px;
+    padding: 30px;
+}
+section .cards .text-card p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+}
+.other p{
+    align-items: center;
+    padding-left: 10%; 
+    padding-bottom: 2%;
+}
+
+
+@media (max-width: 900px){
+    section .cards{
+        flex-direction: column;
+    }
+}
