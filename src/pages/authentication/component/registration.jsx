@@ -139,6 +139,7 @@ export const Registration = () => {
           placeholder="********"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          // pattern='^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$'
         />
         <button
           className="signupbutton"

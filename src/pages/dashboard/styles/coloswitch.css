@@ -73,6 +73,8 @@
     display: grid;
     place-items: center;
     cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .ri-settings-3-fill{

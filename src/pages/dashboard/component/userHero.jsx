@@ -14,7 +14,7 @@ function UserHero() {
   const prodp = localStorage.getItem("userdp");
 
   return (
-    <div className="userhero">
+    <div className="userhero" id='map1'>
       <div className="das">
         <img src={prodp} alt="" className="dashdp" />
 
@@ -24,7 +24,7 @@ function UserHero() {
             {date.toLocaleDateString("en-US", dateOptions)}
           </span>
         </p>
-      </div>
+      </div >
       <ReLineChart />
     </div>
   );

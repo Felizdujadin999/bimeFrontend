@@ -8,15 +8,14 @@ import faq from "../../../assets/images/support.svg";
 import logout from "../../../assets/images/logoutpng.png";
 import PopUp from "./popUp";
 import LogOutPopUp from "./logOutPopUp";
-import UploadAvatar from "./uploadAvatar";
 import { useNavigate } from "react-router-dom";
+import UploadAvatar from "./uploadAvatar";
 
 
 
 
 
 export const UserTopnav = () => {
-  const navigate = useNavigate();
   const [dropDownOpens, setDropdownOpens] = useState(false);
   const [openInboxss, setOpenInboxs] = useState(false);
   const [buttonPopUp, setButtonPopUp] = useState(false);
@@ -24,6 +23,7 @@ export const UserTopnav = () => {
   const [logBotton, setLogBotton] = useState(false);
   const username = localStorage.getItem("username");
   const userdp = localStorage.getItem("userdp");
+  const navigate = useNavigate();
 
   const handleDropDowns = () => {
     setDropdownOpens(!dropDownOpens);
@@ -37,9 +37,8 @@ export const UserTopnav = () => {
     setOpenInboxs(!openInboxss);
   };
 
-
   return (
-    <nav className="usertopnav">
+    <nav className="usertopnav" id="nav">
       <div>
         <img className="userlogo" src={bimelogo} alt="" />
       </div>
@@ -53,17 +52,22 @@ export const UserTopnav = () => {
         </div>
         {dropDownOpens && (
           <div className="userdrpdown" onClick={toggleInboxs}>
-            <li className="useraccount" onClick={() =>{ 
-              setButtonPopUp(true) 
-              setLogBotton(false)
-            }
-              }>
+            <li
+              className="useraccount"
+              onClick={() => {
+                setButtonPopUp(true);
+                setLogBotton(false);
+                document.getElementById("map1").style.filter = "blur(2px)";
+                document.getElementById("map2").style.filter = "blur(2px)";
+                document.getElementById("map3").style.filter = "blur(2px)";
+              }}
+            >
               {" "}
               <img className="userdp2" src={user1} alt="" />
               <p>Edit profile</p>
             </li>
 
-            <li className="usermylist" >
+            <li className="usermylist">
               {" "}
               <img className="userls" src={list} alt="" />
               <p>Restricted</p>
@@ -80,11 +84,16 @@ export const UserTopnav = () => {
               <img className="userhp" src={help} alt="" />
               <p>Help</p>
             </li>
-            <li className="userlogout" onClick={() =>{ 
-              setLogBotton(true)
-              setButtonPopUp(false)
-              
-              }}>
+            <li
+              className="userlogout"
+              onClick={() => {
+                setLogBotton(true);
+                setButtonPopUp(false);
+                document.getElementById("map1").style.filter = "blur(2px)";
+                document.getElementById("map2").style.filter = "blur(2px)";
+                document.getElementById("map3").style.filter = "blur(2px)";
+              }}
+            >
               <img className="userlg" src={logout} alt="" />
               <p>Sign out</p>
             </li>
@@ -92,28 +101,45 @@ export const UserTopnav = () => {
         )}
       </div>
       {
-      <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
-        <p>Edit you profile picture </p>
-        <UploadAvatar />
-        <br />
-        <div className="updateusernamebox">
-          Edit your username
-          <input
-            type="text"
-            className="editusernamebox"
-            value={newUsername}
-            onChange={(e) => setNewUsername(e.target.value)}
-            placeholder={username}
-          />
-        </div>
-      </PopUp>
+        <PopUp trigger={buttonPopUp} setTrigger={setButtonPopUp}>
+          <p>Edit you profile picture </p>
+          <UploadAvatar />
+          <br />
+          <div className="updateusernamebox">
+            Edit your username
+            <input
+              type="text"
+              className="editusernamebox"
+              value={newUsername}
+              onChange={(e) => setNewUsername(e.target.value)}
+              placeholder={username}
+            />
+          </div>
+        </PopUp>
       }
 
       {
         <LogOutPopUp trigger={logBotton} setTrigger={setLogBotton}>
           <h1 className="confirm">Are you sure you want to logout?</h1>
-          <button className="logno">No</button>
-          <button className="logyes">Yes</button>
+          <button
+            className="logno"
+            onClick={() => {
+              setLogBotton(false);
+              document.getElementById('map1').style.filter = 'none'
+              document.getElementById('map2').style.filter = 'none'
+              document.getElementById('map3').style.filter = 'none'
+            }}
+          >
+            No
+          </button>
+          <button
+            className="logyes"
+            onClick={() => {
+              navigate("/");
+            }}
+          >
+            Yes
+          </button>
         </LogOutPopUp>
       }
     </nav>

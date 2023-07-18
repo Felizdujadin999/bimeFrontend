@@ -1,15 +1,22 @@
-.Main-conatiner{
-    background: var(--bg-color);
-    width: 100vw;
+:root{
+    --bg-color:#160225;
 }
-.upper{
+
+
+
+.abtMain-container{
+    width: 100vw;
+    overflow-x: hidden;
+   
+    
+}
+.abtupper{
     height: 19%;
     border-bottom: solid 2pt  rgba(245, 245, 245, 0.192);
+    overflow-x: hidden;
 }
-span{
-    background: var(--bg-color);
-}
-.about{
+
+.abtabout{
      font-family: sans-serif;
      padding-top: 2%;
      margin-left: 6%;
@@ -17,47 +24,62 @@ span{
      font-size: x-large;
      display: flex;
      margin-bottom: 2%;
+     color: white;
+     padding: 1rem;
+     overflow-x: hidden;
 }
-.details{
+.abtdetails{
     padding-top: 3%;
     margin: auto;
-    max-width: 640px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    font-weight: 600;
+    font-weight: 400;
     margin-bottom: 12%;
+    color: white;
+    padding: 1rem;
+    overflow-x: hidden;
 }
-section{
+.abtsection{
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;  
+    overflow-x: hidden; 
 }
-section .container{
-    margin: 100px;
+.abtsection {
+    margin-left: 50px;
+    overflow-x: hidden;
 }
-section h2{
+.abtsection h2{
     font-size: 40px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    color: white;
+    overflow-x: hidden;
 }
-section .cards{
+.abtsection .cards{
     display: grid;
+    overflow-x: hidden;
 }
-section p{
+.abtsection p{
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    overflow-x: hidden;
 }
-section .cards .text-card{
+.abtsection .abtcards .abttext-card{
     margin: 10px;
     padding: 30px;
+    overflow-x: hidden;
 }
-section .cards .text-card p{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: 500;
+.abtsection .abtcards .abttext-card p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
 }
-.other p{
+.abtother p{
     align-items: center;
     padding-left: 10%; 
     padding-bottom: 2%;
+    overflow-x: hidden;
 }
 
 
