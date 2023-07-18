@@ -1,14 +1,18 @@
 import "../styles/homePageStyle.css";
 import { Helmet } from "react-helmet";
-import { Hero } from "./hero";
-import { TopNav } from "./topNav";
-import ColorSwitcher from "./colorSwitcher";
-import video from "../../../assets/video/Add a heading.mp4";
+import { Hero } from './hero';
+import { TopNav } from './topNav';
+import ColorSwitcher from './colorSwitcher';
+import video from '../../../assets/video/Add a heading.mp4';
 
-function HomePage() {
-  return (
-    <section className="map">
-      <div>
+
+function HomePage (){
+   
+    return(
+       
+       <section className='map'>
+
+        <div>
         <Helmet>
           <link
             rel="icon"
