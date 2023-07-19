@@ -38,6 +38,7 @@ popup-inner{
     border: none;
     outline: none;
     margin-top: 1rem;
+    cursor: pointer;
     color: #fff;
 }
 
@@ -50,6 +51,7 @@ popup-inner{
     margin-top: 1rem;
     border-radius: 5px;
     color: #fff;
+    cursor: pointer;
 }
 
 

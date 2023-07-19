@@ -31,7 +31,7 @@
 
 
 .userdp{
-    
+    cursor: pointer;
     border-radius: 50PX;
     width: 2rem;
     height: 2rem;
@@ -149,7 +149,15 @@ margin: 12%;
     justify-content: space-evenly;
 }
 
-
+.logyes{
+    cursor: pointer;
+}
+.logno{
+    cursor: pointer;
+}
+.closelog-btn{
+    cursor: pointer;
+}
 
 
 @media only screen and (max-width:900px) {
