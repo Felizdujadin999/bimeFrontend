@@ -1,12 +1,21 @@
 import React from "react";
 import "../styles/AboutUs.css";
+import { useNavigate } from "react-router-dom";
 
 function AboutUs() {
+    const navigate = useNavigate();
+
+    const goBack = () => {
+      navigate("/dashboard")
+    }
+
     const bgcolor = localStorage.getItem('color')
+
   return (
     <div className="abtMain-container" style={{background:bgcolor}}>
       <div className="abtupper">
         <div className="abtabout">About Bime.</div>
+        <button className="abtbutton" onClick={goBack}>Go Back</button>
       </div>
 
       <div className="abtdetails">

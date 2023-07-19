@@ -5,17 +5,29 @@
 
 
 .abtMain-container{
-    width: 100vw;
-    overflow-x: hidden;
-   
-    
+    width: 100%;
+    overflow-x: hidden;    
 }
 .abtupper{
     height: 19%;
     border-bottom: solid 2pt  rgba(245, 245, 245, 0.192);
     overflow-x: hidden;
+    display: flex;
 }
-
+.abtbutton{
+    margin-top: 1%;
+    height: 9vh;
+    cursor: pointer;
+    font: 300 1em 'Fira Sans', sans-serif;
+    border-radius: 8px;
+    border:  solid 2pt rgba(255, 255, 255, 0.24);
+    background: none;
+    margin-left: 69%;
+    padding: 0.5em 0.5em;
+}
+.abtbutton:hover{
+    --bg-color:#160225;
+}
 .abtabout{
      font-family: sans-serif;
      padding-top: 2%;
