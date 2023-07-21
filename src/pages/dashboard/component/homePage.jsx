@@ -4,6 +4,7 @@ import { Hero } from './hero';
 import { TopNav } from './topNav';
 import ColorSwitcher from './colorSwitcher';
 import video from '../../../assets/video/Add a heading.mp4';
+import staticone from '../../../assets/images/static/static1.jpg';
 
 
 function HomePage (){
@@ -25,9 +26,9 @@ function HomePage (){
         </Helmet>
       </div>
       <div className="homemain">
-        <ColorSwitcher />
         <TopNav />
         <Hero />
+        <ColorSwitcher />
         <div className="aside1">
           <div className="box1">
             <video
@@ -40,11 +41,15 @@ function HomePage (){
               autoPlay
             ></video>
           </div>
-          <div className="box2"></div>
+          <div className="box2">
+            <img src={staticone} alt="" className="static_one"/>
+          </div>
         </div>
 
         <div className="aside2">
-          <div className="box3"></div>
+          <div className="box3">
+
+          </div>
           <div className="box4"></div>
         </div>
 
