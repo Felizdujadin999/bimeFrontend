@@ -40,17 +40,26 @@
 }
 
 .video{
-    margin-top: 2%;
+    margin-top: 0.5%;
     margin-left: 10%;
     width: 20rem;
     height: 220px;
   }
   
-
-  .video::-webkit-media-controls {
+.video::-webkit-media-controls {
     display: none;
   }
 
+.static_one{
+    margin-top: 2.3%;
+    width: 35rem;
+    margin-left: 14%;
+    transition: transform 0.2s ease;
+}
+.static_one:hover{
+    cursor: pointer;
+    transform: scale(1.1); 
+}
 
 .ipt{
     border: solid 1pt red;
@@ -87,9 +96,9 @@
     border-radius: 5px;
     background-color:rgba(255, 255, 255, 0.733);
     margin-left: 2%;
-    margin-top: 2%;  
+    margin-top: 2%; 
+    overflow: hidden; 
 }
-
 
 .aside2{
     display: flex;
@@ -104,6 +113,7 @@
     background-color: rgba(255, 255, 255, 0.733);
     margin-left: 5%;
     margin-top: 1%;
+    overflow: hidden;
 }
 
 .box4{

@@ -2,10 +2,34 @@
     height: 25%;
     width: 90%;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.733);
+    background-color: hwb(0 100% 0% / 0.733);
     margin-left: 5%;
     margin-top: 1%;
-    justify-content: flex-end;
-    display: flex;
+    overflow: hidden;
 }
-
+.slider{
+    display: flex;
+    gap: 35px;
+    animation: scrollRight 30s linear infinite;
+}
+.slider:hover{
+    animation-play-state: paused;
+}
+@keyframes scrollRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(50%);
+    }
+  }
+.imgs{
+    margin-top: 0.4%;
+    height: 14.2rem;
+    transition: transform 1s;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+.imgs:hover {
+    transform: scale(1.1); 
+  }
